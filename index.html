@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva QyF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .malla {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .ramo {
+      background-color: #ccc; /* gris */
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+    .aprobado {
+      background-color: #9be7a4 !important; /* verde */
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Malla Interactiva - Química y Farmacia</h1>
+
+  <div class="malla">
+    <div class="ramo" onclick="toggle(this)">Biología</div>
+    <div class="ramo" onclick="toggle(this)">Química General</div>
+    <div class="ramo" onclick="toggle(this)">Matemáticas</div>
+    <div class="ramo" onclick="toggle(this)">Física</div>
+    <div class="ramo" onclick="toggle(this)">Bioquímica</div>
+    <div class="ramo" onclick="toggle(this)">Anatomía</div>
+    <div class="ramo" onclick="toggle(this)">Farmacología I</div>
+    <div class="ramo" onclick="toggle(this)">Tecnología Farmacéutica</div>
+  </div>
+
+  <script>
+    function toggle(element) {
+      element.classList.toggle("aprobado");
+    }
+  </script>
+
+</body>
+</html>
